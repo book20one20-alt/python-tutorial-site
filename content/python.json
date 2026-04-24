@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "introduction",
+    "title": "Introduction",
+    "explanation": "Python is a language known for readable syntax. It is often used for web apps, automation, data work, and learning programming basics.",
+    "example": "print(\"Hello, Python learner!\")",
+    "editor_code": "print(\"Hello, Python learner!\")"
+  },
+  {
+    "slug": "variables",
+    "title": "Variables",
+    "explanation": "A variable stores a value with a name. You can save text, numbers, or other data and reuse it later in your program.",
+    "example": "name = \"Abdullah\"\nage = 30\nprint(name)\nprint(age)",
+    "editor_code": "name = \"Abdullah\"\nage = 30\nprint(f\"Name: {name}\")\nprint(f\"Age: {age}\")"
+  },
+  {
+    "slug": "data-types",
+    "title": "Data Types",
+    "explanation": "Python works with several data types such as strings, integers, floats, lists, and booleans. Each type is useful for a different kind of value.",
+    "example": "message = \"Python\"\ncount = 5\nprice = 9.99\nis_ready = True\nprint(type(message))\nprint(type(count))",
+    "editor_code": "message = \"Python\"\ncount = 5\nprice = 9.99\nis_ready = True\nprint(message, type(message))\nprint(count, type(count))\nprint(price, type(price))\nprint(is_ready, type(is_ready))"
+  },
+  {
+    "slug": "loops",
+    "title": "Loops",
+    "explanation": "A loop repeats a block of code. A for loop is helpful when you want to go through items in a list or repeat a task several times.",
+    "example": "fruits = [\"apple\", \"banana\", \"orange\"]\nfor fruit in fruits:\n    print(fruit)",
+    "editor_code": "for number in range(1, 6):\n    print(f\"Count: {number}\")"
+  },
+  {
+    "slug": "functions",
+    "title": "Functions",
+    "explanation": "A function groups reusable code under one name. You can call it whenever you need the same task again.",
+    "example": "def greet(name):\n    return f\"Hello, {name}!\"\n\nprint(greet(\"Student\"))",
+    "editor_code": "def multiply(a, b):\n    return a * b\n\nresult = multiply(4, 3)\nprint(f\"Answer: {result}\")"
+  }
+]

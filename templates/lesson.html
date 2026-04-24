@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ lesson.title }} | Python Tutorial Hub{% endblock %}
+
+{% block content %}
+<article class="lesson-page">
+    <section class="lesson-header card-panel">
+        <span class="eyebrow">Lesson</span>
+        <h1>{{ lesson.title }}</h1>
+        <p>{{ lesson.explanation }}</p>
+    </section>
+
+    <section class="card-panel">
+        <h2>Example</h2>
+        <pre class="code-block"><code>{{ lesson.example }}</code></pre>
+    </section>
+
+    <section class="card-panel editor-panel">
+        <div class="editor-header">
+            <h2>Try it yourself</h2>
+            <button id="run-code-btn" class="primary-btn" type="button">Run Code</button>
+        </div>
+        <label class="sr-only" for="code-editor">Python editor</label>
+        <textarea id="code-editor" class="code-editor" spellcheck="false">{{ lesson.editor_code }}</textarea>
+        <div class="output-wrap">
+            <h3>Output</h3>
+            <pre id="output-box" class="output-box">Click “Run Code” to see the result.</pre>
+        </div>
+    </section>
+
+    <nav class="pager" aria-label="Lesson pager">
+        {% if previous_lesson %}
+        <a class="secondary-btn" href="{{ url_for('lesson', slug=previous_lesson.slug) }}">&larr; Previous</a>
+        {% else %}
+        <span></span>
+        {% endif %}
+
+        {% if next_lesson %}
+        <a class="secondary-btn" href="{{ url_for('lesson', slug=next_lesson.slug) }}">Next &rarr;</a>
+        {% else %}
+        <span></span>
+        {% endif %}
+    </nav>
+</article>
+{% endblock %}
